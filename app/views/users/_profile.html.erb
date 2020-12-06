@@ -5,11 +5,21 @@
 		<th>name</th>
 		<th><%= current_user.name %></th>
 	</tr>
-
 	<tr>
 		<th>introduction</th>
 		<th><%= user.introduction %></th>
 	</tr>
+	<tr>
+		<th>follows</th>
+		<th><%= link_to follows_path(user_id: user) do %><%= user.follower.count %><% end %></th>
+	</tr>
+	<tr>
+		<th>followers</th>
+			<th>
+				<%= link_to followers_path(user_id: user) do %><%= user.followed.count %><% end %></th>
+	</tr>
+
+
 </table>
 
 <div class="row">

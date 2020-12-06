@@ -30,6 +30,12 @@ class UsersController < ApplicationController
       render "edit"
     end
   end
+  
+  def follow
+  end
+  
+  def follower
+  end
 
   private
   def user_params
